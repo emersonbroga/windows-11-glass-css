@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 11 Glass Effect</title>
+  <link rel="stylesheet" href="style.css" >
+
+</head>
+<body>
+  <div class="wallpaper">
+    <button class="toggle btn">Toggle</button>
+    <div class="panel glass hidden">
+      <div class="avatar"><img src="images/avatar.jpeg" alt="Avatar"></div>
+      <div class="time"></div>
+      <div class="tiles">
+        <div class="tile weather">Weather</div>
+        <div class="tile edge">Edge</div>
+        <div class="tile stocks">Stocks</div>
+        <div class="tile calendar">Calendar</div>
+        <div class="tile photos">Photos</div>
+        <div class="tile todo">Todo</div>
+      </div>
+      <div class="buttons">
+        <button class="btn">Add Widgets</button>
+      </div>
+      <div class="top-stories">Top Stories</div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    const toggleBtn = document.querySelector('.toggle');
+    const panel = document.querySelector('.panel');
+    const time = document.querySelector('.time');
+
+    const toggle = (e)=>{ 
+      e.preventDefault();
+      panel.classList.toggle('hidden')
+    };
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', toggle);
+    }
+
+    if (time) {
+
+      setInterval(()=>{
+        const date = new Date();
+        const currentTime = [date.getHours(), date.getMinutes(), date.getSeconds()].map((v)=> `0${v}`.slice(-2)).join(':');
+        time.innerText = currentTime;
+      }, 1000);
+
+      
+    }
+
+   
+
+    
+  
+  </script>
+
+</body>
+</html>

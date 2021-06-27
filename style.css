@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.5em 2em;
+  border-radius: 0.2em;
+  border: none;
+  font-weight: 100;
+}
+.toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.wallpaper {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgb(181, 202, 211) url('images/wallpaper.jpeg') no-repeat center;
+  background-size: cover;
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+}
+
+.panel {
+  margin: 20px;
+  padding: 20px;
+  width: 50vw;
+  height: calc(100% - 40px);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: 1s ease-in-out;
+}
+
+.panel.hidden {
+  left: calc(-50vw - 20px);
+}
+
+.panel .avatar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.panel .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.panel .time {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.panel .tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.panel .tiles .tile {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  min-height: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.panel .tiles .tile.weather {
+  background: linear-gradient(to bottom right, #f0eff4, #fdf5c6);
+}
+
+.panel .tiles .tile.edge {
+  background: url('images/beach.jpeg') no-repeat center;
+  background-size: cover;
+}
+
+.panel .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.panel .top-stories {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px 0;
+  height: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
