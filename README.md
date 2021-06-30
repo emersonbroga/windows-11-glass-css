@@ -4,7 +4,7 @@
 
 O efeito de vidro ja é uma tendência no design e esse repositório é do tutorial que eu fiz ensinando a fazer o efeito.
 
-![Windows 11 "glass" effect](http://s3.emerson.link/prints/2021-06-27-154800-5tgkh.png)
+[![!Windows 11 "glass" effect](http://i3.ytimg.com/vi/EMP4zIDNaRA/maxresdefault.jpg)](https://www.youtube.com/watch?v=EMP4zIDNaRA)
 
 
 #### Se ainda não segue, veja minhas outras Redes Sociais
